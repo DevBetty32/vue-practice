@@ -11,7 +11,7 @@
 </div>
 </template>
 <script>
-import { cubeInteger } from '@/conmon';
+import { cubeInteger } from '@/common';
     export default {
         name: 'cubeCompositionAPI',
         setup(){

@@ -11,6 +11,7 @@ import UseSlotModal from '@/views/UseSlotModal.vue'
 import ProvideInject from '@/views/ProvideInject.vue'
 import Cube from '@/views/Cube.vue'
 import CubeCompositionAPI from '@/views/CubeCompositionAPI.vue'
+import CompositionAPIProvide from '@/views/CompositionAPIProvide.vue'
 
 const routes = [
   {
@@ -83,6 +84,10 @@ const routes = [
   {
     path:'/cubeCompositionAPI',
     component:CubeCompositionAPI
+  },
+  {
+    path:'/CompositionAPIProvide',
+    component:CompositionAPIProvide
   }
 ]
 
