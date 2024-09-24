@@ -9,6 +9,9 @@
         <!--submit 이벤트발생>login 메소드 호출됨-->
         <button type="submit">Login</button>
       </form>
+      
+    <!-- errorMessage에 값이 있을때만 표시됨 -->
+    <p v-if="errorMessage" style="color: red;">{{ errorMessage }}</p>
     </div>
   </template>
   
@@ -33,7 +36,7 @@
           localStorage.setItem('token', response.data.token); //브라우저에 저장해서 세션 유지
           this.$router.push('/dashboard'); // 로그인 후 임시 대시보드로 이동
         } catch (error) {
-          console.error('Login failed:', error);
+        this.errorMessage = '아이디 또는 비밀번호를 확인하세요'; // 오류 메시지 설정
         }
       },
     },
