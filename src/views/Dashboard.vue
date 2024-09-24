@@ -24,14 +24,15 @@ import axios from 'axios';
         data(){
             return{
                 items: Array(9).fill({title:'',value:''}),
+                polling : null, //폴링객체 선언
             };
         }, //항목들 초기화
         mounted(){
             this.fetchItems(); //마운트시 호출
-            setInterval(this.fetchItems, 5000); //5초마다 fetchItems 호출
+            this.polling = setInterval(this.fetchItems, 5000); //5초마다 fetchItems 호출
         },
         beforeUnmount(){
-            
+            clearInterval(this.polling); //폴링 중지
         },
         methods:{
             async fetchItems(){
