@@ -1,3 +1,5 @@
+
+
 <template>
 <div class="dashboard">
     <div class="grid">
@@ -11,6 +13,7 @@
 </div>
 </template>
 <script>
+//일단은 간단한 내용이니 setup 안쓰고 작성..
 import DashboardItem from '@/components/DashboardItem.vue';
 import axios from 'axios';
 
@@ -26,6 +29,9 @@ import axios from 'axios';
         mounted(){
             this.fetchItems(); //마운트시 호출
             setInterval(this.fetchItems, 5000); //5초마다 fetchItems 호출
+        },
+        beforeUnmount(){
+            
         },
         methods:{
             async fetchItems(){
