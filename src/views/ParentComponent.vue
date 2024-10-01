@@ -1,15 +1,20 @@
 <template>
+    <GridSample/>
 <ChildComponent ref="ChildComp" @customEvent="sendMsg" />
     <button type="button" @click="changeChildData">Change Child Data</button>
     <br>
     <button type="button" @click="checkChildData">Check Child Data</button>
+
 </template>
 <script>
 import ChildComponent from "./ChildComp.vue";
+import GridSample from "../components/GridSample.vue"
 
     export default {
         name: 'parentComp', //컴포넌트 이름
-        components: {ChildComponent}, //타 컴포넌트 사용 시 컴포넌트를 import하고 배열로 저장
+        components: {ChildComponent,
+            GridSample
+        }, //타 컴포넌트 사용 시 컴포넌트를 import하고 배열로 저장
         computed: {
             childMsg() {
                 return this.$refs.ChildComp.childMsg;

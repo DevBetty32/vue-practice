@@ -15,7 +15,9 @@
     <router-link to="/provideinject">provideInject</router-link> |
     <router-link to="/cube">cube</router-link> |
     <router-link to="/cubeCompositionAPI">cubeCompositionAPI</router-link>|
-    <router-link to="/CompositionAPIProvide">CompositionAPIProvide</router-link>
+    <router-link to="/CompositionAPIProvide">CompositionAPIProvide</router-link>|
+    <router-link to="/GridView">GridView</router-link>|
+    <router-link to="/ElPractice">ElPractice</router-link>
   </nav>
   <router-view/>
 </template>

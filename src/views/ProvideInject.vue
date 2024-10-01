@@ -1,10 +1,14 @@
 <template>
     <provide-inject-child></provide-inject-child>
+    <GridSample></GridSample>
 </template>
 <script>
 import ProvideInjectChild from './ProvideInjectChild.vue';
+import GridSample from '../components/GridSample.vue'
     export default {
-        components: {ProvideInjectChild}, //타 컴포넌트 사용 시 컴포넌트를 import하고 배열로 저장
+        components: {ProvideInjectChild,
+            GridSample,
+        }, //타 컴포넌트 사용 시 컴포넌트를 import하고 배열로 저장
         data() { //html과 js코드에서 사용할 데이터 변수 선언
             return {
                 items: ['명조','젠존제','스타레일']

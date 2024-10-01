@@ -12,6 +12,8 @@ import ProvideInject from '@/views/ProvideInject.vue'
 import Cube from '@/views/Cube.vue'
 import CubeCompositionAPI from '@/views/CubeCompositionAPI.vue'
 import CompositionAPIProvide from '@/views/CompositionAPIProvide.vue'
+import GridView from '@/views/GridView.vue'
+import ElPractice from '@/views/ElPractice.vue'
 
 const routes = [
   {
@@ -88,6 +90,14 @@ const routes = [
   {
     path:'/CompositionAPIProvide',
     component:CompositionAPIProvide
+  },
+  {
+    path:'/GridView',
+    component:GridView
+  },
+  {
+    path:'/ElPractice',
+    component:ElPractice
   }
 ]
 
